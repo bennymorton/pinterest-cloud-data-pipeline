@@ -1,5 +1,7 @@
 # Pinterest Data Processing Pipeline
 
+> NOTE: This is the capstone project which AiCore students complete at the end of their Data Engineering training course, which I helped design the architecture  > and code for. The Databricks-based code (all of the Spark cleaning and processing) has not been included in this repo, to avoid plagiarism.
+
 ## Overview
 
 Pinterest Data Processing Pipeline is a full end-to-end cloud data engineering project which uses AWS MSK and S3 to perform batch processes and Kinesis to perform streaming processes. In this project I have completed a data processing pipeline using AWS and Databricks which connects to a user_posting_emulation to emulate real users posting to the app.
@@ -9,35 +11,9 @@ The user_posting_emulation scripts runs an emulation of a pinterest feed for eac
 ## Full pipeline architecture 
 ![](/images/architecture.png)
 
-## To Run
-- Install Python (3.8.5)
-- Install dependencies in **requirements.txt** using pip
-
-- Copy the key-pair associated with the EC2 instance into a file named 0a4e65e909bd-key-pair.pem and set permissions to read only by executing:
-```
-chmod 400 0a4e65e909bd-key-pair.pem
-```
-- In another terminal, to connect to the EC2 instance and start the confluent server, run:
-```
-ssh -i 0a4e65e909bd-key-pair.pem ec2-user@ec2-54-86-149-29.compute-1.amazonaws.com
-```
-```
-export CLASSPATH=/home/ec2-user/kafka_2.12-2.8.1/libs/aws-msk-iam-auth-1.1.5-all.jar
-```
-```
-cd confluent-7.2.0/bin/
-```
-```
-./kafka-rest-start /home/ec2-user/confluent-7.2.0/etc/kafka-rest/kafka-rest.properties
-```
-
-- In two separate terminals, run:
-```
-python3 user_posting_emulation_batch.py
-python3 user_posting_emulation_streaming.py
-```
-
 ## Project Outline
+
+> This is an outline of the steps (milesones) a student would follow in order to complete this project. 
 
 ### Milestone 1 & 2
 I set up my AWS account and downloaded the pinterest posting structure. This included the The posting emulation, which at that time just took rows from the pinterest_database and posted them on the command line. 
