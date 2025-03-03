@@ -1,6 +1,7 @@
 # Pinterest Data Processing Pipeline
 
-> NOTE: This is the capstone project which AiCore students complete at the end of their Data Engineering training course, which I helped design the architecture  > and code for. The Databricks-based code (all of the Spark cleaning and processing) has not been included in this repo, to avoid plagiarism.
+> NOTE: This is the capstone project which AiCore students complete at the end of their Data Engineering training course, which I helped design the architecture and code for. 
+> The Databricks-based code (all of the Spark cleaning and processing) has not been included in this repo, to avoid plagiarism.
 
 ## Overview
 
